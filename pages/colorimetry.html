@@ -7,6 +7,213 @@ permalink: /Researches/Colorimetry
 
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		
+		<h1 class="text-center">{{page.title}}</h1>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<section>
+			<article class="introduction">
+				<h3>Why Colorimetry ?</h3>
+				<p>When we take a photo of our scene, we have to control all the parameters about the image. Colorimetry is one of these parameters. <br/>
+				The colors are important to make a good comparison between the real model and the 3D model.
+				</p>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+					<img src="/assets/images/colorcheck-example.jpg" class="img-responsive" alt="ColorChecker example">
+				</div>
+				<div class="clearfix"></div>
+				<!--<h3>How to master this feature ?</h3>
+				<p>We need to use a Color Checker. Basically, it's a color chart with the most used colors in real life. The principle is quite simple :
+					<ul class="list-group">
+						<li class="list-group-item">1) Put the color checker somewhere.</li>
+						<li class="list-group-item">2) Make a photo of the chart.</li>
+						<li class="list-group-item">3) Make a new color profile on your computer.</li>
+						<li class="list-group-item">4) Apply your new profile on your photo set</li>
+					</ul>
+				</p>-->
+			</article>
+			<article class="Xrite">
+				<h3>X-Rite Colorchecker Passport</h3>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+					<img src="/assets/images/colorchecker-passport.jpg" class="img-responsive" alt="ColorChecker Passport">
+				</div>
+				<div class="clearfix"></div>
+				<p>
+					X-rite is one of the world leaders about sciences and color management technologies. X-rite provide services on a large scale, from medicine, printing, to photography or even automobile sector. X-rite has a large range of products which is very adaptive.<br/>
+					We choose the ColorChecker Passport for this project. The chart is relatively complete and can be taken or placed wherever we want.
+				</p>
+				<p>
+					The chart is composed of three panels : 
+					<ul class="list-group">
+						<li class="list-group-item"> 
+							<h3>Creative Enhancement Target</h3>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+								<img src="/assets/images/colorchecker-passport2.jpg" class="img-responsive" alt="ColorChecker Passport">
+							</div>
+							<div class="clearfix"></div>
+							<p>	- Evaluate and optimize shadow details or highlight clipping with gray ramp patches.<br/>
+								- Use as visual reference for color spectrum and color adjustment with HSL (hue, saturation, lightness) patches.<br/>
+								- Warm or cool images.<br/></p>
+						</li>
+						<li class="list-group-item">
+							<h3>Classic Target</h3>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+								<img src="/assets/images/colorchecker-passport3.jpg" class="img-responsive" alt="ColorChecker Passport">
+							</div>
+							<div class="clearfix"></div>
+							<p>- Industry standard color reference target for creating DNG profiles and for evaluating specific colors</p>
+							</li>
+						<li class="list-group-item">
+							<h3>White Balance Target</h3>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+								<img src="/assets/images/colorchecker-passport4.jpg" class="img-responsive" alt="ColorChecker Passport">
+							</div>
+							<div class="clearfix"></div>
+							<p>- Create custom in-camera white balance for a consistent white point in a set of images, eliminating the need to correct each image later</p>
+						</li>
+					</ul>
+				</p>
+			</article>
+			<article class="Xrite-use">
+				<h3>How to use my ColorChecker Passport ?</h3>
+				<h4>A. Create my color profile :</h4>
+				<div class="alert alert-info">
+					<strong>Requirements</strong><br/>
+					<p>
+						- DSLR (Digital Camera) using the RAW format <br/>
+						- Adobe Photoshop with CameraRAW or Adobe Lightroom<br/>
+						- ColorChecker Software + Lightroom plugin (if Lightroom) : 
+						<a class="alert-link" href="http://xritephoto.com/ph_product_overview.aspx?ID=1257&Action=Support&SoftwareID=1063&catid=28">(Download)</a>
+					</p>
+				</div>
+				<div class="well">
+					<ol>
+						<li>
+							Calibrate the white balance on your DSLR by placing the White Balance Target in the scene. The target must be illuminated by the main light source.
+						</li>
+						<li>
+							Now, replace the White Balance target by the Classic one.
+						</li>
+						<li>
+							Take a RAW photo of the target. You have to be the most perpendicular as possible in order to make the detection of the target easier on the software.
+						</li>
+						<li>
+							If your DSLR uses <kbd>.DNG</kbd> as RAW format, go to next step, else open your RAW photo in Lightroom or CameraRAW and export in <kbd>.DNG</kbd>
+						</li>
+						<h4>Using Adobe Lightroom :</h4>
+						<li>
+							Import your photo <kbd>.DNG</kbd> of the ColorChecker, crop on the target and export it as color profile (right clic > export > ColorChecker Passport).
+						</li>
+						<li>
+							Close and restart Lightroom.
+						</li>
+					</ol>
+					<ol start="5">
+						<h4>Using ColorChecker Passport software :</h4>
+						<li>
+							Import your photo <kbd>.DNG</kbd> in the ColorChecker Passport software. Your target will be automatically detected. Else, follow the instructions to select the active zone.
+						</li>
+						<li>
+							Click on "Create profile" and save the file <kbd>.dcp</kbd>.
+						</li>
+						<li>
+							Move your file <kbd>.dcp</kbd> to <code>C:\Users\[USER_NAME]\AppData\Roaming\Adobe\CameraRaw\CameraProfiles</code>.
+						</li>
+					</ol>
+				</div> <!-- END well -->
+				<h4>B. Apply a color profile :</h4>
+				<div class="alert alert-info">
+					<strong>Requirements</strong><br/>
+					<p>
+						- DSLR (Digital Camera) using the RAW format <br/>
+						- Adobe Photoshop with CameraRAW or Adobe Lightroom<br/>
+						- ColorChecker Software + Lightroom plugin (if Lightroom) : 
+						<a class="alert-link" target="_blank" href="http://xritephoto.com/ph_product_overview.aspx?ID=1257&Action=Support&SoftwareID=1063&catid=28">(Download)</a><br/>
+						- DNG profile manager software <a class="alert-link" target="blank" href="http://xritephoto.com/ph_product_overview.aspx?ID=1257&Action=Support&SoftwareID=1345&catid=28">(Download)</a><br/>
+						- Color profile loaded (see A.)
+					</p>
+				</div>				
+				<div class="well">
+				<h4>Using Adobe Lightroom :</h4>
+				<ol>
+					<li>
+						Import your RAW photo in Lightroom.
+					</li>
+					<li>
+						Select the photo and click on "Develop".
+					</li>
+					<li>
+						Choose your profile in the section "Camera Calibration" > "Profile".
+					</li>
+				</ol>
+				<h4>Using Adobe CameraRAW :</h4>
+				<ol>
+					<li>
+						Import your RAW photo into Photoshop, it will be automatically opened with CameraRAW.
+					</li>
+					<li>
+						Click on "Camera Calibration" (with the camera icon).
+					</li>
+					<li>
+						Choose your profile in the menu "Camera Profile".
+					</li>
+					<li>
+						Now you're able to :<br/>
+							- Use the photo in photoshop by clicking on "Open Image" on the bottom right corner.<br/>
+							- Save the photo by clicking on "Save the image" on the bottom left corner.
+					</li>
+				</ol>
+				</div> <!-- END well -->
+				<h4>C. Manage the color profiles :</h4>
+				<div class="alert alert-info">
+					<strong>Requirements</strong><br/>
+					<p>
+						- DNG profile manager software <a class="alert-link" target="blank" href="http://xritephoto.com/ph_product_overview.aspx?ID=1257&Action=Support&SoftwareID=1345&catid=28">(Download)</a><br/>
+					</p>
+				</div>
+				<p>DNG profile manager, is a software, provided by X-rite, giving access to manage easily your colors profiles. Several options are available to sort the profiles (by camera for example). You can also activate/desactivate profiles.
+				</p>
+				<ol type="a">
+					<li>
+						Activate/desactivate a color profile :<br/>
+						<ol>
+							<li>
+								Execute DNG Profile Manager.
+							</li>
+							<li>
+								Active or desactivate a profile by ticking the case related.
+							</li>
+						</ol>
+					</li>
+					<li>
+						Delete a color profile :<br/>
+						<ol>
+							<li>
+								To delete profiles, select the profiles by ticking the cases related.
+							</li>
+							<li>
+								"File" > "Delete", then confirm.<br/>
+							</li>
+						</ol>
+					</li>
+				</ol>
+				<div class="alert alert-success">
+					 <h4>Shortcuts :</h4>
+					 <ul>
+					 	<li>
+					 		You can delete a profile with <kbd>CTRL + D</kbd>.
+					 	</li>
+					 	<li>
+					 		To refresh your color profiles list, press <kbd>CTRL + L</kbd> or select the option "Reload Profiles" in "File" menu.
+					 	</li>
+					 	<li>
+					 		You can manually manage your profiles (adding/deleting) via the finder of your OS by pressing <kbd>CTRL + F</kbd> or by selecting "Open the folder of DNG profiles" in "File" menu.
+					 	</li><br/>
+					 	<div class="alert alert-danger">
+					 		<strong>Warning</strong> Deleting a profile in DNG Profile Manager is definitive.
+					 	</div>
+					 </ul>
+				</div>
+
+			</article>
+		</section>
 	</div>
 </div>
