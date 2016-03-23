@@ -82,3 +82,20 @@ footer{
 .navbar{
   border-top: none!important;
 }
+
+/* ASIDE */
+
+#sidebar h4{
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  text-align: center;
+}
+#download-zip,
+#download-tar{
+  
+  height: 63px;
+  background-image: url("/assets/images/download-zip.png");
+  background-size: cover;
+}
+.repo-owner{
+
+}
