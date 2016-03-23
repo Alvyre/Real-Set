@@ -93,7 +93,7 @@ footer{
 #download-tar{
   
   height: 63px;
-  background-image: url("/assets/images/download-zip.png");
+  background-image: url("{{site.url}}/assets/images/download-zip.png");
   background-size: cover;
 }
 .repo-owner{
