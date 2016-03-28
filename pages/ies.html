@@ -1,0 +1,106 @@
+---
+layout: default
+title: IES Profile
+category: Researches
+permalink: /Researches/IES
+---
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h1>{{page.title}}</h1>
+
+		<h3>What is an IES Profile ?</h3>
+		<section>
+			<article>
+				<p>The IES (Illumation Engineering Society) format is an easy way to represent light profiles. Theses profiles are generally used to render interior architecture. They can be used also to define an atmosphere and emotions for a location (bar, exhibition with soft lights, ..). Theses profiles can show the physical repartition of the light from whichever source of light.</p>
+				<p>In Renderman, IES profiles can be applied to a Geometric Area Light to create a sophisticated light and then to reproduce a real light.</p>
+				<p>This collection of Geometric Areas Lights (cf image) and the associated profiles are ready-to-use in a Maya scene.</p>
+				<a class="fancybox" href="{{site.url}}/assets/images/large/IES_1.png"><img src="{{site.url}}/assets/images/IES_1.png" class="img-responsive center-block" alt="IES Profile"/></a>
+			</article>
+			<article class="alert alert-success">
+				We chose these profiles to have a good representation of the light in our model. In this page you will find answers to these questions :
+				<ul class="">
+					<li class="">How to import and use a IES Profile in Maya ?</li>
+					<li class="">Where can I find IES profiles ? How to build them ?</li>
+					<li class="">How to visualize a profile ?</li>
+				</ul>
+			</article>
+		</section>
+		<h3>Preview an IES Profile</h3>
+		<section>
+			<article>
+				<div class="alert alert-info">
+					<strong>Requirements</strong><br/>
+					<p>
+						- IESViewer
+						<a class="alert-link" target="_blank" href="http://www.photometricviewer.com/1_4_Download.html">(Download)</a>
+					</p>
+				</div>
+				<p>
+					Previewing an IES profile before to use it in Maya is possible with the software "IESViewer". It's a photometric viewer which is able to preview, find and convert photometric files (IES, LDT).
+				</p>
+				<a class="fancybox" href="{{site.url}}/assets/images/large/IES_2.png"><img src="{{site.url}}/assets/images/IES_2.png" class="img-responsive center-block" alt="IESViewer"/></a>
+
+				IESViewer functions :
+				<ul class="list-group">
+					<li class="list-group-item">Photometric viewing</li>
+					<li class="list-group-item">Photometric file details</li>
+					<li class="list-group-item">Real time rendering of the photometric</li>
+					<li class="list-group-item">Comparison between two profiles.</li>
+					<li class="list-group-item">Converting from LDT to IES format</li>
+				</ul>
+				<a class="fancybox" href="{{site.url}}/assets/images/large/IES_4.png"><img src="{{site.url}}/assets/images/IES_4.png" class="img-responsive center-block" alt="IESViewer"/></a>
+				<div class="alert alert-info">
+					<strong>TIPS :</strong> Renderman have a large offer of IES profile ready-to-use on their website : <a class="alert-link" href="https://renderman.pixar.com/view/DP25764">let's go !</a> 
+				</div>
+			</article>
+		</section>
+		<h3>Create a profile</h3>
+		<section>
+			<article>
+				<div class="alert alert-info">
+					<strong>Requirements</strong><br/>
+					<p>
+						- Creator IES
+						<a class="alert-link" target="_blank" href="http://www.vertheim.com/ies-generator.html">(Download)</a>
+					</p>
+				</div>
+				<p>You can make your own IES profile by using the software Creator IES.<br/>
+				With Creator IES, you are able to make IES profiles templates differents from most known and used profiles.<br/>
+				Creator IES can create a profile from scratch or to modify and customize an existing one. The window shows 2 representations : Curbe Editor and Picture thumbnail</p>
+				<a class="fancybox" href="{{site.url}}/assets/images/large/IES_3.jpg"><img src="{{site.url}}/assets/images/IES_3.png" class="img-responsive center-block" alt="curve editor"/></a>
+				<p>The Curve Editor is a graph of the IES light template (red line of the photo). The length of the curve shows the differents parts of the templace which are easily modified by clicking&dropping wherever on the curve.</p>
+				<p>We can also set pamameters on the light :
+					<ul>
+						<li>Edition zone</li>
+						<li>Luminosity</li>
+						<li>Distance from the wall</li>
+					</ul>
+					On the right side, we can see the resulting image of the curve, created in the editor in real time.</p>
+				<a class="fancybox" href="{{site.url}}/assets/images/large/IES_5.jpg"><img src="{{site.url}}/assets/images/IES_5.png" class="img-responsive center-block" alt="curve editor"/></a>
+			</article>
+		</section>
+		<h3>Import a profile into Maya/Renderman</h3>
+		<section>
+			<article>
+				<div class="alert alert-info">
+					<strong>Requirements</strong><br/>
+					<p>
+						- Autodesk Maya
+						<a class="alert-link" target="_blank" href="http://www.autodesk.fr/products/maya/overview">(Download)</a><br/>
+						- Renderman plugin for Maya
+						<a class="alert-link" target="_blank" href="https://renderman.pixar.com/view/purchase">(Download)</a>
+					</p>
+				</div>
+				<div class="well">
+					<ul>
+						<li>Create an Area Light</li>
+						<li>Search "Light Profile" in the Area light configuration</li>
+						<li>Import your <kbd>.IES</kbd> file into the IES map</li>
+					</ul>
+				</div>
+			</article>
+		</section>
+		
+
+	</div> <!-- end col -->
+</div> <!-- end row -->

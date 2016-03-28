@@ -96,10 +96,6 @@ footer{
   background-image: url("{{site.url}}/assets/images/download-zip.png");
   background-size: cover;
 }
-.repo-owner{
-
-}
-
-.fancybox-pdf{
-  margin : 10px;
+img.center-block{
+  margin: 10px auto;
 }
