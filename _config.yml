@@ -10,7 +10,7 @@ title: Real-Set
 email: contact@romainfrancois.fr
 description: "Real-set is a Student Project, powered by Ubisoft. The objective is to test the capacity of renders about illumiation."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://arctic76.github.io/Real-Set" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 twitter_username: Alvyre
 github_username:  Arctic76
 

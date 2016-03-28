@@ -12,26 +12,43 @@
   <div class="container">
     <div class="collapse navbar-collapse navbar-menubuilder">
         <ul class="nav navbar-nav navbar-left">
-          <li class="active"><a href="http://arctic76.github.io/Real-Set//index.html">Home</a></li>
+        {% if page.title == 'Home' %}
+          <li class="active"><a href="{{ site.url }}/index.html">Home</a></li>
+        {% else %}
+        <li><a href="{{ site.url }}/index.html">Home</a></li>
+        {% endif %}
+        {% if page.category == 'Model' %}
+          <li class="dropdown active">
+        {% else %}
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="/Model/">Model
+        {% endif %}
+            <a class="dropdown-toggle" data-toggle="dropdown" href="{{ site.url }}/Model/">Model
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="http://arctic76.github.io/Real-Set//Model/Materials">Materials</a></li>
-              <li><a href="http://arctic76.github.io/Real-Set//Model/Construction">Construction</a></li>
-              <li><a href="#">Download</a></li> 
+              <li><a href="{{ site.url }}/Model/Materials">Materials</a></li>
+              <li><a href="{{ site.url }}/Model/Construction">Construction</a></li> 
             </ul>
           </li>
+          {% if page.category == 'Researches'%}
+          <li class="dropdown active">
+          {% else %}
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="/Researches/">Researches
+          {% endif %}
+            <a class="dropdown-toggle" data-toggle="dropdown" href="{{ site.url }}/Researches/">Researches
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="http://arctic76.github.io/Real-Set//Researches/DCRAW">DCRAW</a></li>
-              <li><a href="http://arctic76.github.io/Real-Set//Researches/Colorimetry">Colorimetry</a></li>
-              <li><a href="http://arctic76.github.io/Real-Set//Researches/Camera-Stance">Camera Stance</a></li> 
+              <li><a href="{{ site.url }}/Researches/DCRAW">DCRAW</a></li>
+              <li><a href="{{ site.url }}/Researches/Colorimetry">Colorimetry</a></li>
+              <li><a href="{{ site.url }}/Researches/Camera-Stance">Camera Stance</a></li> 
             </ul>
           </li>
-          <li><a href="http://arctic76.github.io/Real-Set//About">About</a></li> 
+          {%if page.title == 'About' %}
+          <li class="active">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="{{ site.url }}/About">About</a>
+          </li> 
         </ul>
     </div>
   </div>
