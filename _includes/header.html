@@ -43,6 +43,13 @@
               <li><a href="{{ site.url }}/Researches/IES">IES Profiles</a></li>
             </ul>
           </li>
+          {% if page.title == 'Gallery' %}
+          <li class="active">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="{{ site.url }}/Gallery/">Gallery</a>
+          </li>
           {%if page.title == 'About' %}
           <li class="active">
           {% else %}

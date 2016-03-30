@@ -99,3 +99,9 @@ footer{
 img.center-block{
   margin: 10px auto;
 }
+
+/* Isotope */
+
+.grid-item{
+  margin : 10px;
+}
