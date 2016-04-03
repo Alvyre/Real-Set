@@ -4,3 +4,265 @@ title: Camera Stance
 category: Researches
 permalink: Researches/Camera-Stance
 ---
+
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h1 class="text-center">{{page.title}}</h1>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<section>
+			<article class="introduction">
+				<h3>Why Camera Stance ?</h3>
+				<p>When we take a photo of our scene, we have to control all the parameters about the camera. Camera stance is one of these parameters. <br/>
+				The camera stance and its optical features are important to make a good comparison between the real model and the 3D model.
+				</p>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+					<img src="{{ site.url }}/assets/images/pict1_camera_stance.png" class="img-responsive" alt="Camera stance Maya">
+				</div>
+				<div class="clearfix"></div>
+			</article>
+			<article class="introduction">
+				<h3>Introduction</h3>
+				<p>One of the most important point, in the reproduction of 3D scene, is the camera placement. Indeed, to be able to reproduce the scene from a picture, it is necessary to know the camera features that is use for the shot, as well as its position and inclination compared to the scene.<br/>
+				However, it is possible to reduce the numbers parameters to know, to simplify the reproduction.<br/>
+				For this, we will explain a simple way to place your camera compared to your scene during your shot and to get the measure. Finaly, we will see how to replace the camera in the 3D software (here Maya).
+				</p>
+				<div class="clearfix"></div>
+			</article>
+			<article class="Xrite-use">
+				<h3>How to place my Camera for the real shot ?</h3>
+				<div class="alert alert-info">
+					<strong>Requirements</strong><br/>
+					<p>
+						- DSLR (Digital Camera) using the RAW format <br/>
+						- Tripod<br/>
+						- Tape-measure<br/>
+						- String<br/> 
+						- Test pattern :
+						<a class="alert-link" href="https://github.com/Arctic76/Real-Set/blob/gh-pages/assets/images/Test_pattern.png">(Download)</a>
+					</p>
+				</div>
+				<div class="clearfix"></div>
+				<h4>A. Informations to note during the shot to reproduce the scene :</h4>
+				<div class="well">
+					<ol>
+						<li>
+							Camera reference
+						</li>
+						<li>
+							Lens reference
+						</li>
+						<li>
+							Focal length
+						</li>
+						<li>
+							Distance between the scene and the camera sensor.
+						</li>
+					</ol>
+				</div> <!-- END well -->
+				<div class="clearfix"></div>
+				<h4>B. Scene positioning :</h4>
+				<div class="well">
+					<ol type="a">
+						<li>
+							Place the background landmark :<br/>
+							<ol>
+								<li>
+									Place the test pattern (Test_pattern.png or an other if you have) on the backgroud of the scene. The origine must be at the center of the side.
+								</li>
+							</ol>
+						</li>
+						<li>
+							Place the scene :<br/>
+							<ol>
+								<li>
+									Place your scene on a support to raise the height of it. After, that will be easier to adjust the height of the camera compared to the scene.
+								</li>
+							</ol>
+						</li>
+						<li>
+							Put the plates :<br/>
+							<ol>
+								<li>
+									Put the plates or other elements that can move the scene during their intallation.
+								</li>
+							</ol>
+						</li>
+						<li>
+							Place the foreground landmark :<br/>
+							<ol>
+								<li>
+									On the open side, begin to do some marks, on the outside, to indicate the centre of different sides. Stretch a string between the top and the bottom center, and between the left and the right center.
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div> <!-- END well -->
+				<div class="clearfix"></div>
+				<h4>C. Camera positioning :</h4>
+				<div class="well">
+					<ol type="a">
+						<li>
+							Display the reference grid of the camera :<br/>
+							<ol>
+								<li>
+									Display the reference grid of the camera. This one must show the center of the screen.
+								</li>
+							</ol>
+						</li>
+						<li>
+							Place the camera :<br/>
+							<ol>
+								<li>
+									Place the camera in front of your scene, at the distance that you want (scene-sensor distance). <strong>Warning, to place the camera, do not use the distance between the scene and le lens, because the camera position in a 3D software correspond to the position of the sensor.</strong>
+								</li>
+								<li>
+									(Optional) Adjust the focal length value at the value you want.
+								</li>
+								<li>
+									To simplify the camera positioning in the 3D software, make sure that the focal point be in the scene center axis and that the camera is not incline compared to the scene. To be sure of position and inclination, you must ensure that the three landmark (background, foreground and camera) be superimpose.
+								</li>
+							</ol>
+						</li>
+						<img src="{{ site.url }}/assets/images/sketch_install_camera.png" class="img-responsive" alt="sketch camera stance">
+						<li>
+							Take a picture :<br/>
+							<ol>
+								<li>
+									Take a picture of your scene with the different landmarks. This picture will be use to place the camera in the 3D scene. When you have taken the picture, you can remove the landmark in pay attention to don't move the scene.
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div> <!-- END well -->
+				<div class="clearfix"></div>
+				<h4>D. Determine the focal length :</h4>
+				<div class="alert alert-info">
+					<strong>Information</strong><br/>
+					<p>
+						It can be a difference between the real focal length value and the one provids by the manufacturer, or the one that you can find in the picture properties. This difference can be at the origine of important mistakes during the reproduction of the camera in the 3D software and the rendering. So to knowthe real focal length value, we will use a OpenCV script with some pictures of a checkerboard take with your camera.
+					</p>
+				</div>				
+				<div class="well">
+				<ol type="a">
+						<li>
+							Recover the source code and the checkerboard :<br/>
+							<ol>
+								<li>
+									To recover this, go on the <a class="alert-link"target="blank" href="http://docs.opencv.org/2.4/doc/tutorials/calib3d/camera_calibration/camera_calibration.html#cameracalibrationopencv"> OpenCV tutorial</a>.
+								</li>
+								<li>
+									Compile the source code.
+								</li>
+							</ol>
+						</li>
+						<li>
+							Take some picture of the checkerboard :<br/>
+							<ol>
+								<li>
+									Take a series of pictures of your checkerboard with different inclinations. Ensure that the checkerboard take almost all frame (like the pictures below). More the checkerboard is far, less the measure will be reliable.
+								</li>
+							</ol>
+						</li>
+						<img src="{{ site.url }}/assets/images/opencv_grid.png" class="img-responsive" alt="OpenCV checkerboard">
+						<li>
+							Recover the focal length value :<br/>
+							<ol>
+								<li>
+									To know your focal length value, you have to import your picture on your computer and create the corresponding « image_list.xml » and « config.xml » files before to execute the OpenCV programme.
+								</li>
+								<li>
+									When the execution is finished. Read, in the output file, the focal value in x and y in the camera matrix.
+									<img src="{{ site.url }}/assets/images/matrix.png" class="img-responsive" alt="Camera matrix">
+								</li>
+								<li>
+									Do the average of the focal lengths.
+								</li>
+								<li>
+									<strong>Warning</strong>, if you have resize your pictures before the OpenCV treatment, it's necessary to reput to scale the focal length.
+								</li>
+								<li>
+									<strong>Warning</strong>, OpenCV give the focal length in pixel, so you have to multiply the fx and fy by the pixel size of the sensor. It's possible that the sensor pixels be rectangulare, and that you have two different sizes for the pixel.
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div> <!-- END well -->
+				<div class="clearfix"></div>
+			</article>
+			<article class="Xrite-use">
+				<h3>How to reproduce the shot in the 3D software (Maya) ?</h3>
+				<h4>A. Positioning of the scene :</h4>
+				<div class="well">
+					<ol>
+						<li>
+							Place your scene at 0 on x and y, this will be easier to place the camera.
+						</li>
+						<img src="{{ site.url }}/assets/images/4_view_camera_Maya.png" class="img-responsive" alt="4 view camera Maya">
+					</ol>
+				</div> <!-- END well -->
+				<div class="clearfix"></div>
+				<h4>B. Camera reproduction :</h4>
+				<div class="well">
+					<ol type="a">
+						<li>
+							Adjust the sensor size :<br/>
+							<ol>
+								<li>
+									Adjust the size of the sensor with the values that you can find in the camera documentation.
+									<img src="{{ site.url }}/assets/images/sensor.png" class="img-responsive" alt="Camera aperture parameters Maya">
+								</li>
+							</ol>
+						</li>
+						<li>
+							Adjust the focale length :<br/>
+							<ol>
+								<li>
+									Adjust the focal length with the value find with OpenCV.
+									<img src="{{ site.url }}/assets/images/focal.png" class="img-responsive" alt="Focal parameter Maya">
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div> <!-- END well -->
+				<div class="clearfix"></div>
+				<h4>B. Camera positioning :</h4>
+				<div class="well">
+					<ol type="a">
+						<li>
+							Place the camera at the distance that you have used during the shot.
+						</li>
+						<li>
+							Verify and correct the camera position and inclination :<br/>
+							<ol>
+								<li>
+									Pass in camera view.
+								</li>
+								<li>
+									Create an image plane by importing your picture of scene with the landmarks.
+									<img src="{{ site.url }}/assets/images/Image_plane.png" class="img-responsive" alt="Image plane Maya">
+								</li>
+								<li>
+									If this one don't appear, it's possible that it be too far. You can modify the distance in the plan attributes.
+									<img src="{{ site.url }}/assets/images/depth.png" class="img-responsive" alt="Image plane depth parameter Maya">
+								</li>
+							</ol>
+						</li>
+						<li>
+							Verify the camera position :<br/>
+							<ol>
+								<li>
+									Give a soft opacity at the image plane to see the real and 3D scenes.
+								</li>
+								<li>
+									If the two scenes are not confused, correct the camera position and inclination.
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div> <!-- END well -->
+				<div class="clearfix"></div>
+			</article>
+		</section>
+	</div>
+</div>
