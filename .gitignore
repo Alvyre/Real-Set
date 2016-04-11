@@ -4,3 +4,4 @@ _site
 _config.yml
 _config_server.yml
 *.yml
+_config.yml

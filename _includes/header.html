@@ -17,38 +17,45 @@
         {% else %}
         <li><a href="{{ site.url }}/index.html">Home</a></li>
         {% endif %}
-        {% if page.category == 'Model' %}
+        {% if page.category == 'Set' %}
           <li class="dropdown active">
         {% else %}
           <li class="dropdown">
         {% endif %}
-            <a class="dropdown-toggle" data-toggle="dropdown" href="{{ site.url }}/Model/">Model
+            <a class="dropdown-toggle" data-toggle="dropdown" href="{{ site.url }}/Set/">Set
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="{{ site.url }}/Model/Materials">Materials</a></li>
-              <li><a href="{{ site.url }}/Model/Construction">Construction</a></li> 
+              <li><a href="{{ site.url }}/Set/Material">Material</a></li>
+              <li><a href="{{ site.url }}/Set/Construction">Construction</a></li> 
             </ul>
           </li>
-          {% if page.category == 'Researches'%}
-          <li class="dropdown active">
-          {% else %}
-          <li class="dropdown">
-          {% endif %}
-            <a class="dropdown-toggle" data-toggle="dropdown" href="{{ site.url }}/Researches/">Researches
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="{{ site.url }}/Researches/DCRAW">DCRAW</a></li>
-              <li><a href="{{ site.url }}/Researches/Colorimetry">Colorimetry</a></li>
-              <li><a href="{{ site.url }}/Researches/Camera-Stance">Camera Stance</a></li>
-              <li><a href="{{ site.url }}/Researches/IES">IES Profiles</a></li>
-            </ul>
-          </li>
-          {% if page.title == 'Gallery' %}
+          {%if page.title == 'Method' %}
           <li class="active">
           {% else %}
           <li>
           {% endif %}
-            <a href="{{ site.url }}/Gallery/">Gallery</a>
+            <a href="{{ site.url }}/Method/">Method</a>
+          </li> 
+          {% if page.category == 'Research'%}
+          <li class="dropdown active">
+          {% else %}
+          <li class="dropdown">
+          {% endif %}
+            <a class="dropdown-toggle" data-toggle="dropdown" href="{{ site.url }}/Research/">Research
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ site.url }}/Research/DCRAW">DCRAW</a></li>
+              <li><a href="{{ site.url }}/Research/Colorimetry">Colorimetry</a></li>
+              <li><a href="{{ site.url }}/Research/Camera-Stance">Camera Stance</a></li>
+              <li><a href="{{ site.url }}/Research/IES">IES Profile</a></li>
+            </ul>
+          </li>
+          {% if page.title == 'Result' %}
+          <li class="active">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="{{ site.url }}/Result/">Result</a>
           </li>
           {%if page.title == 'About' %}
           <li class="active">

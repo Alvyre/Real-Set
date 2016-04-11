@@ -22,7 +22,7 @@ $(document).ready(function() {
 		closeEffect	: 'none'
 	});
 
-	if(document.title == 'Gallery'){
+	if(document.title == 'Result'){
 		$('.grid').isotope({
   		// options
   		itemSelector: '.grid-item',
