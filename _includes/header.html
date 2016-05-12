@@ -29,13 +29,14 @@
               <li><a href="{{ site.url }}/Set/Construction">Construction</a></li> 
             </ul>
           </li>
+          <!--
           {%if page.title == 'Method' %}
           <li class="active">
           {% else %}
           <li>
           {% endif %}
             <a href="{{ site.url }}/Method/">Method</a>
-          </li> 
+          </li>--> 
           {% if page.category == 'Research'%}
           <li class="dropdown active">
           {% else %}
@@ -44,7 +45,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="{{ site.url }}/Research/">Research
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="{{ site.url }}/Research/DCRAW">DCRAW</a></li>
+              <!---<li><a href="{{ site.url }}/Research/DCRAW">DCRAW</a></li>-->
               <li><a href="{{ site.url }}/Research/Colorimetry">Colorimetry</a></li>
               <li><a href="{{ site.url }}/Research/Camera-Stance">Camera Stance</a></li>
               <li><a href="{{ site.url }}/Research/IES">IES Profile</a></li>
