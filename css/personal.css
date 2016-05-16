@@ -105,3 +105,9 @@ img.center-block{
 .grid-item{
   margin : 10px;
 }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
